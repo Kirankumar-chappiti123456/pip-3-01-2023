@@ -8,4 +8,26 @@ char *k=memchr(s,'a',l);
 (k)?printf("found"):printf("not found");
 }
 
+using own fuction:
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+char s[]={'k','i','r','a','n'};
+int l=strlen(s);
+int f=0;
+char k;
+printf("enter the character:");
+scanf("%c",&k);
+
+for(int i=0;i<l;i++)
+{
+if(s[i]==k)
+{
+    f++;
+}
+}
+(f>=1)?printf("found"):printf("not found");
+}
+
 
