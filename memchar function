@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+char s[]={'k','i','r','a','n'};
+int l=strlen(s);
+char *k=memchr(s,'a',l);
+(k)?printf("found"):printf("not found");
+}
+
+
