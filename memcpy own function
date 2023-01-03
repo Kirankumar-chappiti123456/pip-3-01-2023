@@ -1,0 +1,38 @@
+own memcpy:
+
+#include<stdio.h>
+#include<string.h>
+void memcpyfun(void *dest,void *src,int l)
+{
+    char *s=(char*)src;
+    char *d=(char*)dest;
+    for(int i=0;i<l;i++)
+    {
+        d[i]=s[i];
+    }
+    printf("the own memcpy:%s",d);
+}
+int main()
+{
+    char s[]="kirankumar";
+    char d[20];
+    int l=(strlen(s)+1);
+    memcpyfun(d,s,l);
+}
+
+
+
+uisng string libr function:
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char s[]="kirankumar";
+    char d[20];
+    int l=(strlen(s)+1);
+    memcpy(d,s,l);
+    printf("using libr func:%s",d);
+}
+
+
