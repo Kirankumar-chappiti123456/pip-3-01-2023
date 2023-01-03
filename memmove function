@@ -67,4 +67,51 @@ int main()
     printf("using libr func:%s",d);
 }
 
+int array with memmove:
+#include<stdio.h>
+#include<string.h>
+int memovefun(void *dest,void *src,int L)
+{
+    int  new[20];
+    int  *s=(int*)src;
+    int *d=(int*)dest;
+    int *temp=new;
+    for(int i=0;i<L;i++)
+    {
+        temp[i]=s[i];
+    }
+    for(int i=0;i<L;i++)
+    {
+        d[i]=temp[i];
+    }
+    for(int i=0;i<L;i++)
+    {
+    printf("%d",d[i]);
+    }
+}
+int main()
+{
+int  s[]={1,2,3,4,5,6};
+int  d[20];
+int L =(sizeof(s)/sizeof(s[0]));
+memovefun(d,s,L);
+}
+
+
+using libr function:
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int s[]={1,2,3,4,5,6};
+    int d[20];
+    int l=sizeof(s);
+    int k=sizeof(s)/sizeof(s[0]);
+    memcpy(d,s,l); // here size of the array not length;
+    for(int i=0;i<k;i++)
+    {
+    printf("%d ",d[i]);
+    }
+}
 
