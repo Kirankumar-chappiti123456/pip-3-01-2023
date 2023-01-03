@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int *const ptr=&a;
+    *ptr=200;
+    printf("%d\n",a);
+    printf("%p\n",&a);
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr); // it shows the ptr value is 200 which holds address of a values in that a.
+    printf("%p\n",&ptr); // every pointer has it own address .
+}
+
+
+1)the const pointer the value is change but the address will not not be changed
+2)the value change using pointer.
