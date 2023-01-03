@@ -11,3 +11,26 @@ output:
 27
 
 
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   char s[]={'a','b','k','i','r','k','a','n'};
+   int l=strlen(s);
+  char *k=memchr(s,'k',l);
+  printf("%c",k[0]);
+  printf("%c",k[1]);
+  printf("%c",k[2]);
+}
+
+
+#include <stdio.h>
+#define TEST 5
+int main()
+{
+    printf("TEST");
+
+    return 0;
+}
+
+
