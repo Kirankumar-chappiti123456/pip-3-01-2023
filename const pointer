@@ -14,3 +14,21 @@ int main()
 
 1)the const pointer the value is change but the address will not not be changed
 2)the value change using pointer.
+
+
+
+#include <stdio.h>
+int main()
+{
+    int a=20;
+    int b=30;
+    int const *ptr;
+    ptr=&a;
+    ptr=&b;
+    printf("%p\n",&a);
+    printf("%p\n",ptr);
+    printf("%p\n",&b);
+}
+
+
+1)the value we can not change but we can change the address.
