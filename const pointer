@@ -32,3 +32,19 @@ int main()
 
 
 1)the value we can not change but we can change the address.
+
+const to const pointer:
+syntax: const int *const ptr;
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int a=10,b=20;
+   const int *const ptr=&a;
+   //*ptr=200;
+  // ptr=&b;
+   printf("%p\n",ptr);
+   printf("%d\n",*ptr);
+   printf("%p",&a);
+}
