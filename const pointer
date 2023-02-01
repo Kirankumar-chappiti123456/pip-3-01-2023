@@ -33,6 +33,7 @@ int main()
 
 1)the value we can not change but we can change the address.
 
+
 const to const pointer:
 syntax: const int *const ptr;
 
